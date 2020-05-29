@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function add(){
+		//alert("you clicked");
+	}
+	function sub(){
+		a=document.getElementById("n").value;
+		//alert("your name is "+a);
+	}
+	
+	function validatePassword(){
+		b=document.getElementById("p").value;
+		if(b.length<3 || b.length>10){
+			//alert("minimum length should 3 and maximum should be 10");
+			document.getElementById("result").innerHTML="minimum length should 3 and maximum should be 10";
+		}
+		else{
+			document.getElementById("result").innerHTML="";
+		}
+	}
+	
+</script>
+
+</head>
+<body>
+	<form action="LoginServlet" method=post>
+		Email : <input type=email name=email><br>
+		Password : <input type=password id="p" name=pass onkeyup="validatePassword()"><div id="result"></div><br>
+	
+		<input type=submit value=Login  onClick="add()">
+	</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
